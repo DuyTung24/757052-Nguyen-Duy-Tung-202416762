@@ -26,6 +26,52 @@ public class Cart {
 		}
 	}
 	
+	
+	//Overloading method
+//	public void addDigitalVideoDisc(DigitalVideoDisc [] dvdList) {
+//		if (qtyOrdered + dvdList.length < MAX_NUMBERS_ORDERED) {
+//			for (int i = 0; i < dvdList.length; i++) {
+//				itemsOrdered[qtyOrdered] = dvdList[i];
+//				qtyOrdered++;
+//				
+//				System.out.println("The disc " + dvdList[i].getTitle() + " has been added to the cart.");
+//			}
+//
+//		}
+//		else if (qtyOrdered + dvdList.length < MAX_NUMBERS_ORDERED) {
+//			System.out.println("The numbers of dvds in the list is too much.");
+//		}
+//	}	
+	
+	
+	public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+		if (qtyOrdered + 1 < MAX_NUMBERS_ORDERED) {
+			itemsOrdered[qtyOrdered] = dvd1;
+			itemsOrdered[qtyOrdered + 1] = dvd2;
+			qtyOrdered += 2;
+			
+			System.out.println("The disc " + dvd1.getTitle() + " has been added to the cart");
+			System.out.println("The disc " + dvd2.getTitle() + " has been added to the cart");
+		}
+		else if (qtyOrdered + 1 >= MAX_NUMBERS_ORDERED) {
+			System.out.println("The cart is currently full");
+		}
+	}
+	
+	public void addDigitalVideoDisc(DigitalVideoDisc... dvds) {
+	    for (DigitalVideoDisc dvd : dvds) {
+	        if (qtyOrdered < MAX_NUMBERS_ORDERED) {
+	            itemsOrdered[qtyOrdered++] = dvd;
+	            System.out.println("Added: " + dvd.getTitle());
+	        } else {
+	            System.out.println("The cart is full.");
+	            break;
+	        }
+	    }
+	}
+	
+	
+	
 	public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
 		boolean check = false;
 		for (int i = 0; i < qtyOrdered; i++) {
