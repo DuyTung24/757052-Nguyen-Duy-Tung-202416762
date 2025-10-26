@@ -1,3 +1,6 @@
+package hust.soict.dsai.aims.cart;
+
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
 
 public class Cart {
 	
@@ -142,6 +145,38 @@ public class Cart {
 	    }
 	    if (!found) {
 	        System.out.println("No DVD found within the given cost range.");
+	    }
+	}
+	
+	
+	public void printCart() {
+	    System.out.println("***********************CART***********************");
+	    System.out.println("Ordered Items:");
+
+	    float totalCost = 0;
+	    for (int i = 0; i < qtyOrdered; i++) {
+	        System.out.println((i + 1) + ". " + itemsOrdered[i].toString());
+	        totalCost += itemsOrdered[i].getCost();
+	    }
+
+	    System.out.printf("Total cost: %.2f $\n", totalCost);
+	    System.out.println("***************************************************");
+	}
+	
+	public void searchById(int id) {
+	    boolean found = false;
+	    System.out.println("Searching for DVD with ID: " + id);
+
+	    for (int i = 0; i < qtyOrdered; i++) {
+	        if (itemsOrdered[i].getId() == id) {
+	            System.out.println("Found: " + itemsOrdered[i].toString());
+	            found = true;
+	            break;
+	        }
+	    }
+
+	    if (!found) {
+	        System.out.println("No DVD found with ID = " + id);
 	    }
 	}
 

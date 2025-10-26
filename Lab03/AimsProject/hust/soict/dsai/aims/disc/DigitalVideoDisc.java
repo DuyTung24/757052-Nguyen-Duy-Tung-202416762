@@ -1,3 +1,4 @@
+package hust.soict.dsai.aims.disc;
 
 public class DigitalVideoDisc {
 	private static int nbDigitalVideoDiscs = 0;
@@ -15,7 +16,13 @@ public class DigitalVideoDisc {
     public int getLength() { return length; }
     public float getCost() { return cost; }
     public int getId() { return id; }
-
+    
+    @Override
+    public String toString() {
+        return String.format("DVD - [%d] - %s - %s - %s - %d mins: %.2f $",
+                id, title, category, director, length, cost);
+    }
+    
     public void setTitle(String title) {
         this.title = title;
     }
