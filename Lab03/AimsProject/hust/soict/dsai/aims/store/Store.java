@@ -1,3 +1,7 @@
+package hust.soict.dsai.aims.store;
+
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+
 public class Store {
     private static final int MAX_NUMBERS_DVDs = 100;
     private DigitalVideoDisc[] itemsInStore = new DigitalVideoDisc[MAX_NUMBERS_DVDs];
