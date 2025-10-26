@@ -11,3 +11,10 @@ Compare: With varargs, we don’t need to create an array when passing arguments
 Ans: Java is Pass-by-Value, but when passing objects, the value being passed is a copy of the reference to that object.
 Hence, methods can modify the object’s data, but not which object the caller’s reference points to
 
+●	After the call of swap(jungleDVD, cinderellaDVD) why does the title of these two objects still remain?
+Ans: Because Java passes a copy of the reference (which is essentially pass-by-value), not the actual reference itself, swapping inside a method does not affect the original variable since it's only a copy of the original variable's value
+●	After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()) why is the title of the JungleDVD changed?
+Ans: Although in the case above, Java does pass by reference, the variable dvd is not the actual object but merely a reference to the object (similar to a pointer in C++). Since the setTitle method modifies the content of the object, the title of jungleDvD is therefore changed.
+
+
+
