@@ -34,7 +34,7 @@ public class AddCompactDiscToStoreScreen extends JFrame{
             @Override
             public void run() {
                 try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/hust/soict/cybersec/aims/screen/view/addCD.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/hust/soict/dsai/aims/screen/view/addCD.fxml"));
                     
                     AddCDScreenController controller = new AddCDScreenController(store);
                     loader.setController(controller);
