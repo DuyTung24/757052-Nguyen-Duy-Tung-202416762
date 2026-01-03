@@ -34,7 +34,7 @@ public class AddBookToStoreScreen extends JFrame{
             @Override
             public void run() {
                 try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/hust/soict/cybersec/aims/screen/view/addBook.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/hust/soict/dsai/aims/screen/view/addBook.fxml"));
                     
                     AddBookScreenController controller = new AddBookScreenController(store);
                     loader.setController(controller);
