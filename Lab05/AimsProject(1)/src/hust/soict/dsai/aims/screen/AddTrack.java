@@ -34,7 +34,7 @@ public class AddTrack extends JFrame{
             @Override
             public void run() {
                 try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/hust/soict/cybersec/aims/screen/view/addTracks.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/hust/soict/dsai/aims/screen/view/addTracks.fxml"));
                     
                     AddTrackScreenController controller = new AddTrackScreenController(CD);
                     loader.setController(controller);
