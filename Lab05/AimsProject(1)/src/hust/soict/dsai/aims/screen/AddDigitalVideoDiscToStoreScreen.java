@@ -34,7 +34,7 @@ public class AddDigitalVideoDiscToStoreScreen extends JFrame{
             @Override
             public void run() {
                 try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/hust/soict/cybersec/aims/screen/view/addDVD.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/hust/soict/dsai/aims/screen/view/addDVD.fxml"));
                     
                     AddDVDScreenController controller = new AddDVDScreenController(store);
                     loader.setController(controller);
